@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calculate-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calculate-form.Designer.cs">
+      <DependentUpon>calculate-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clients-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clients-form.Designer.cs">
+      <DependentUpon>clients-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="copyrigth-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="copyrigth-form.Designer.cs">
+      <DependentUpon>copyrigth-form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,13 +80,46 @@
     <Compile Include="menu-principal.Designer.cs">
       <DependentUpon>menu-principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="print-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print-form.Designer.cs">
+      <DependentUpon>print-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="process-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="process-form.Designer.cs">
+      <DependentUpon>process-form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="users-form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users-form.Designer.cs">
+      <DependentUpon>users-form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="calculate-form.resx">
+      <DependentUpon>calculate-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clients-form.resx">
+      <DependentUpon>clients-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="copyrigth-form.resx">
+      <DependentUpon>copyrigth-form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu-principal.resx">
       <DependentUpon>menu-principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print-form.resx">
+      <DependentUpon>print-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="process-form.resx">
+      <DependentUpon>process-form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="users-form.resx">
+      <DependentUpon>users-form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
