@@ -87,7 +87,6 @@ namespace AquaSpring
             this.btnCopyright.Text = "Copyrigth";
             this.btnCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCopyright.UseVisualStyleBackColor = true;
-            
             // 
             // btnPrint
             // 
@@ -107,7 +106,6 @@ namespace AquaSpring
             this.btnPrint.Text = "Print";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = true;
-
             // 
             // btnCalculate
             // 
@@ -127,7 +125,6 @@ namespace AquaSpring
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalculate.UseVisualStyleBackColor = true;
-
             // 
             // btnProcess
             // 
@@ -147,7 +144,6 @@ namespace AquaSpring
             this.btnProcess.Text = "Process";
             this.btnProcess.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProcess.UseVisualStyleBackColor = true;
-
             // 
             // btnClients
             // 

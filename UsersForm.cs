@@ -16,5 +16,25 @@ namespace AquaSpring
         {
             InitializeComponent();
         }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSetUsers);
+
+        }
+
+        private void UsersForm_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSetUsers.Users' Puede moverla o quitarla según sea necesario.
+            this.usersTableAdapter.TodosRegistros(this.dataSetUsers.Users);
+
+        }
     }
 }

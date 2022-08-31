@@ -33,5 +33,16 @@ namespace AquaSpring.Properties {
                 return ((string)(this["AquaSpringBDConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3KE7BEH\\SQLEXPRESS;Initial Catalog=AquaSpring;Integrated Secu" +
+            "rity=True")]
+        public string AquaSpringConnectionString {
+            get {
+                return ((string)(this["AquaSpringConnectionString"]));
+            }
+        }
     }
 }
