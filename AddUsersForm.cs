@@ -25,23 +25,21 @@ namespace AquaSpring
         private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.usersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
+    
 
         }
 
         private void usersBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
-            this.usersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
+            
 
         }
 
         private void AddUsersForm_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSet1.Users' Puede moverla o quitarla según sea necesario.
-            this.usersTableAdapter.AllRegistry(this.dataSet1.Users);
+            
 
         }
     }

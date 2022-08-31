@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AquaSpring
 {
-    public partial class process_form : Form
+    public partial class UsersForm : Form
     {
-        public process_form()
+        public UsersForm()
         {
             InitializeComponent();
         }
