@@ -32,30 +32,23 @@ namespace AquaSpring
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(users_form));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UsersLabel = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.UsersLabel = new System.Windows.Forms.Label();
             this.dataSet1 = new AquaSpring.DataSet1();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new AquaSpring.DataSet1TableAdapters.UsersTableAdapter();
             this.tableAdapterManager = new AquaSpring.DataSet1TableAdapters.TableAdapterManager();
             this.usersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.AddBtn = new System.Windows.Forms.ToolStripButton();
             this.EditBtn = new System.Windows.Forms.ToolStripButton();
             this.DeleteBtn = new System.Windows.Forms.ToolStripButton();
@@ -63,6 +56,13 @@ namespace AquaSpring
             this.IndexTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.PrintBtn = new System.Windows.Forms.ToolStripButton();
+            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -73,23 +73,16 @@ namespace AquaSpring
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.UsersLabel);
+            this.panel1.Controls.Add(this.usersBindingNavigator);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 24);
+            this.panel1.Size = new System.Drawing.Size(633, 29);
             this.panel1.TabIndex = 0;
-            // 
-            // UsersLabel
-            // 
-            this.UsersLabel.AutoSize = true;
-            this.UsersLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersLabel.Location = new System.Drawing.Point(12, 4);
-            this.UsersLabel.Name = "UsersLabel";
-            this.UsersLabel.Size = new System.Drawing.Size(38, 17);
-            this.UsersLabel.TabIndex = 1;
-            this.UsersLabel.Text = "Users";
             // 
             // BtnSalir
             // 
@@ -99,13 +92,25 @@ namespace AquaSpring
             this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Location = new System.Drawing.Point(558, 1);
+            this.BtnSalir.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BtnSalir.Location = new System.Drawing.Point(556, 3);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(75, 23);
             this.BtnSalir.TabIndex = 1;
-            this.BtnSalir.Text = "Close";
+            this.BtnSalir.Text = "Back";
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // UsersLabel
+            // 
+            this.UsersLabel.AutoSize = true;
+            this.UsersLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsersLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.UsersLabel.Location = new System.Drawing.Point(12, 6);
+            this.UsersLabel.Name = "UsersLabel";
+            this.UsersLabel.Size = new System.Drawing.Size(38, 17);
+            this.UsersLabel.TabIndex = 1;
+            this.UsersLabel.Text = "Users";
             // 
             // dataSet1
             // 
@@ -130,9 +135,11 @@ namespace AquaSpring
             // usersBindingNavigator
             // 
             this.usersBindingNavigator.AddNewItem = null;
+            this.usersBindingNavigator.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.usersBindingNavigator.BindingSource = this.usersBindingSource;
             this.usersBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.usersBindingNavigator.DeleteItem = null;
+            this.usersBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.usersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -151,16 +158,33 @@ namespace AquaSpring
             this.IndexTextBox,
             this.toolStripSeparator3,
             this.PrintBtn});
-            this.usersBindingNavigator.Location = new System.Drawing.Point(0, 24);
+            this.usersBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.usersBindingNavigator.Location = new System.Drawing.Point(110, 2);
             this.usersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.usersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.usersBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.usersBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.usersBindingNavigator.Name = "usersBindingNavigator";
             this.usersBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usersBindingNavigator.Size = new System.Drawing.Size(633, 25);
+            this.usersBindingNavigator.Size = new System.Drawing.Size(412, 23);
             this.usersBindingNavigator.TabIndex = 1;
             this.usersBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -186,16 +210,9 @@ namespace AquaSpring
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -218,8 +235,66 @@ namespace AquaSpring
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
+            this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(23, 22);
+            this.AddBtn.Text = "Add User";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.EditBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditBtn.Image")));
+            this.EditBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(23, 22);
+            this.EditBtn.Text = "Edit User";
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
+            this.DeleteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(23, 22);
+            this.DeleteBtn.Text = "Delete User";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // IndexTextBox
+            // 
+            this.IndexTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.IndexTextBox.Name = "IndexTextBox";
+            this.IndexTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
+            this.PrintBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(23, 22);
+            this.PrintBtn.Text = "Print Reports";
             // 
             // usersDataGridView
             // 
@@ -236,10 +311,10 @@ namespace AquaSpring
             this.dataGridViewTextBoxColumn5});
             this.usersDataGridView.DataSource = this.usersBindingSource;
             this.usersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersDataGridView.Location = new System.Drawing.Point(0, 49);
+            this.usersDataGridView.Location = new System.Drawing.Point(0, 29);
             this.usersDataGridView.Name = "usersDataGridView";
             this.usersDataGridView.ReadOnly = true;
-            this.usersDataGridView.Size = new System.Drawing.Size(633, 493);
+            this.usersDataGridView.Size = new System.Drawing.Size(633, 513);
             this.usersDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -285,72 +360,6 @@ namespace AquaSpring
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
-            this.AddBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(23, 22);
-            this.AddBtn.Text = "Add User";
-            // 
-            // EditBtn
-            // 
-            this.EditBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.EditBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditBtn.Image")));
-            this.EditBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(23, 22);
-            this.EditBtn.Text = "Edit User";
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
-            this.DeleteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(23, 22);
-            this.DeleteBtn.Text = "Delete User";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // IndexTextBox
-            // 
-            this.IndexTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.IndexTextBox.Name = "IndexTextBox";
-            this.IndexTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
-            this.PrintBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(23, 22);
-            this.PrintBtn.Text = "Print Reports";
-            // 
             // users_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +367,6 @@ namespace AquaSpring
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(633, 542);
             this.Controls.Add(this.usersDataGridView);
-            this.Controls.Add(this.usersBindingNavigator);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "users_form";
@@ -373,7 +381,6 @@ namespace AquaSpring
             this.usersBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
