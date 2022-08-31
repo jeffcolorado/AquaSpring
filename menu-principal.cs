@@ -26,7 +26,7 @@ namespace AquaSpring
 
         private void openchildform(object childform)
         {
-            if (this.panel_contenedor.Controls.Count > 0) this.panel_contenedor.Controls.RemoveAt(0);
+            //if (this.panel_contenedor.Controls.Count > 0) this.panel_contenedor.Controls.RemoveAt(0);
             Form fh = childform as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;

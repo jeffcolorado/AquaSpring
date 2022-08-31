@@ -44,15 +44,12 @@ namespace AquaSpring
             this.BtnUsers = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximizarMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel_contenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -277,23 +274,15 @@ namespace AquaSpring
             // 
             // panel_contenedor
             // 
-            this.panel_contenedor.Controls.Add(this.pictureBox3);
+            this.panel_contenedor.BackColor = System.Drawing.Color.White;
+            this.panel_contenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_contenedor.BackgroundImage")));
+            this.panel_contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_contenedor.ForeColor = System.Drawing.SystemColors.MenuText;
             this.panel_contenedor.Location = new System.Drawing.Point(170, 35);
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(620, 542);
             this.panel_contenedor.TabIndex = 6;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(95, 47);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(447, 442);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // menu_principal
             // 
@@ -304,6 +293,7 @@ namespace AquaSpring
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -316,8 +306,6 @@ namespace AquaSpring
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel_contenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,6 +325,5 @@ namespace AquaSpring
         private System.Windows.Forms.Button BtnUsers;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel_contenedor;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
