@@ -80,5 +80,51 @@ namespace AquaSpring
         {
             this.Close();
         }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            if (PictureUpload.Image == null)
+            {
+                MessageBox.Show("Agregue una foto", "Notificación");
+            }
+            else if(string.IsNullOrEmpty(this.nameTextBox.Text))
+            {
+                MessageBox.Show("Por favor escriba un nombre", "Notificación");
+                this.nameTextBox.Focus();
+            }
+            else if (string.IsNullOrEmpty(this.IdTextBox.Text))
+            {
+                MessageBox.Show("Por favor escriba un ID", "Notificación");
+                this.IdTextBox.Focus();
+            }
+            else if (string.IsNullOrEmpty(this.usernameTextBox.Text))
+            {
+                MessageBox.Show("Por favor escriba un Username", "Notificación");
+                this.usernameTextBox.Focus();
+            }
+            else if (string.IsNullOrEmpty(this.passwordTextBox.Text))
+            {
+                MessageBox.Show("Por favor escriba una contraseña", "Notificación");
+                this.passwordTextBox.Focus();
+            }
+            else if (string.IsNullOrEmpty(this.roleComboBox.Text))
+            {
+                MessageBox.Show("Por favor seleccione un rol", "Notificación");
+                this.roleComboBox.Focus();
+            }
+            else
+            {
+                try
+                {
+                    this.passwordTextBox.Text = Globalmente.Encriptar(this.passwordTextBox.Text);
+                    this.usersTableAdapter.InsertarUsuario(Globalmente.Convertir_Imagen_Bytes(this.PictureUpload.Image), this.IdTextBox.Text, this.nameTextBox.Text, this.usernameTextBox.Text, this.roleComboBox.Text, this.passwordTextBox.Text);
+                    Notificacion.ShowBalloonTip(20000);
+                    MessageBox.Show("Usuario creado con éxito.");
+                }catch(Exception)
+                {
+                    MessageBox.Show("El registro no se puede guardar en la base de datos.");
+                }
+            }
+        }
     }
 }

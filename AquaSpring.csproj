@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetUsers.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Globalmente.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
