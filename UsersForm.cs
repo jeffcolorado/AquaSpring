@@ -36,5 +36,11 @@ namespace AquaSpring
             this.usersTableAdapter.TodosRegistros(this.dataSetUsers.Users);
 
         }
+
+        private void AddUserBtn_Click(object sender, EventArgs e)
+        {
+            AddUsersForm AU = new AddUsersForm();
+            AU.ShowDialog();
+        }
     }
 }
